@@ -52,6 +52,7 @@ function App() {
         ticked:false
       }
     ];
+    localStorage.setItem("todos", JSON.stringify(initTodo));
   }
   else{
     initTodo=JSON.parse(localStorage.getItem("todos"));
@@ -81,6 +82,7 @@ function App() {
   let initJournal;
   if(localStorage.getItem("journals")===null){
     initJournal = [{date: "2026-09-27",sno: 0,thoughts: "Today I worked on my React project and learned how to connect my application with an AI API. It felt good to see the feature actually working.",title:"A Productive Day"},{date: "2026-09-28",sno: 1,thoughts: "I spent some time relaxing and thinking about my goals. I realized that making small progress every day is better than trying to finish everything at once.",title:"A Peaceful Evening"}];
+    localStorage.setItem("journals", JSON.stringify(initJournal));
   }
   else{
     initJournal=JSON.parse(localStorage.getItem("journals"));
@@ -119,6 +121,7 @@ function App() {
   let initHabit;
   if(localStorage.getItem("habits")===null){
     initHabit = [{sno: 0, title: "Drink Water"}, {sno: 1, title: "Exercise"}, {sno: 2, title: "Read"}];
+    localStorage.setItem("habits", JSON.stringify(initHabit));
   }
   else{
     initHabit=JSON.parse(localStorage.getItem("habits"));
@@ -150,6 +153,7 @@ function App() {
     initGoal = [{sno: 0, title: "Become more consistent and balanced"},
                 {sno: 1, title: "Build a healthier lifestyle"} ,
                 {sno: 2, title: "Become better at communication"}];
+    localStorage.setItem("goals", JSON.stringify(initGoal));
   }
   else{
     initGoal=JSON.parse(localStorage.getItem("goals"));
