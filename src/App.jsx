@@ -31,13 +31,13 @@ function App() {
         sno: 1,
         title: "Go to the market",
         desc: "You need to go to the market to get this job done",
-        ticked:false
+        ticked:true
       },
       {
         sno: 2,
         title: "Go to the mall",
         desc: "You need to go to the mall to get this job done",
-        ticked:false
+        ticked:true
       },
       {
         sno: 3,
@@ -45,6 +45,12 @@ function App() {
         desc: "You need to go to the ghat to get this job done",
         ticked:false
       },
+      {
+        sno: 4,
+        title: "Clean the study table",
+        desc: "You need to clean the study table to get this job done",
+        ticked:false
+      }
     ];
   }
   else{
@@ -74,7 +80,7 @@ function App() {
 
   let initJournal;
   if(localStorage.getItem("journals")===null){
-    initJournal = [];
+    initJournal = [{date: "2026-09-27",sno: 0,thoughts: "Today I worked on my React project and learned how to connect my application with an AI API. It felt good to see the feature actually working.",title:"A Productive Day"},{date: "2026-09-28",sno: 1,thoughts: "I spent some time relaxing and thinking about my goals. I realized that making small progress every day is better than trying to finish everything at once.",title:"A Peaceful Evening"}];
   }
   else{
     initJournal=JSON.parse(localStorage.getItem("journals"));
@@ -112,7 +118,7 @@ function App() {
   }
   let initHabit;
   if(localStorage.getItem("habits")===null){
-    initHabit = [];
+    initHabit = [{sno: 0, title: "Drink Water"}, {sno: 1, title: "Exercise"}, {sno: 2, title: "Read"}];
   }
   else{
     initHabit=JSON.parse(localStorage.getItem("habits"));
@@ -141,7 +147,9 @@ function App() {
 
   let initGoal;
   if(localStorage.getItem("goals")===null){
-    initGoal = [];
+    initGoal = [{sno: 0, title: "Become more consistent and balanced"},
+                {sno: 1, title: "Build a healthier lifestyle"} ,
+                {sno: 2, title: "Become better at communication"}];
   }
   else{
     initGoal=JSON.parse(localStorage.getItem("goals"));

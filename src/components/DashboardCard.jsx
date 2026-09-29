@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 
 export default function DashboardCard() {
-  let content=JSON.parse(localStorage.getItem("content"))||0;
+  let content=JSON.parse(localStorage.getItem("content"))||{sno:5};
   let totalTodos=JSON.parse(localStorage.getItem("totalTodos"))||0;
   let completedTodos=JSON.parse(localStorage.getItem("completedTodos"))||0;
   let todos=JSON.parse(localStorage.getItem("todos"))||[];
@@ -70,7 +70,7 @@ export default function DashboardCard() {
     paddingTop:"10px"
   }
   let lowerCard={
-    height:"80px",
+    height:"120px",
     width:"900px",
     marginLeft:"20px",
     backgroundColor:"white",
@@ -116,7 +116,7 @@ export default function DashboardCard() {
           </div>
         </div>
       </div>
-      <div style={lowerCard}><b>Recent Journal Entry</b><br></br><div>{journals && journals.map((journal)=>(journal?.sno===journals.length-1?(journal.thoughts.length>=80?<>{journal.thoughts.slice(0,80)+"..."}<br/>{journal.date}</>:<>{journal.thoughts}<br/>{journal.date}</>):""))}</div></div>
+      <div style={lowerCard}><b>Recent Journal Entry</b><br></br><br></br><div>{journals && journals.map((journal)=>(journal?.sno===journals.length-1?(journal.thoughts.length>=80?<>{journal.thoughts.slice(0,80)+"..."}<br/>{journal.date}</>:<>{journal.thoughts}<br/>{journal.date}</>):""))}</div></div>
       
     </div>
   )
