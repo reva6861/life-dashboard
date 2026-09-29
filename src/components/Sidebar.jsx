@@ -7,7 +7,8 @@ export default function Sidebar() {
     backgroundColor:"#E5E7EB",
     minHeight:"100vh",
     fontSize:"23px",
-    paddingLeft:"20px"
+    paddingLeft:"20px",
+    
 
   }
   let inside={

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom"
 
 
 export default function DashboardCard() {
-  let content=JSON.parse(localStorage.getItem("content"))||{};
+  let content=JSON.parse(localStorage.getItem("content"))||0;
   let totalTodos=JSON.parse(localStorage.getItem("totalTodos"))||0;
   let completedTodos=JSON.parse(localStorage.getItem("completedTodos"))||0;
   let todos=JSON.parse(localStorage.getItem("todos"))||[];
@@ -12,7 +12,7 @@ export default function DashboardCard() {
   let totalGoals=JSON.parse(localStorage.getItem("totalGoals"))||0;
   console.log(totalHabits);
   let cardStyle={
-    height:"487px",
+    height:"600px",
     width:"930px",
     backgroundColor:"#F8F9FA",
     marginTop:"10px",
