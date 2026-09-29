@@ -4,12 +4,12 @@ import {Link} from "react-router-dom"
 
 export default function DashboardCard() {
   let content=JSON.parse(localStorage.getItem("content"))||{sno:5};
-  let totalTodos=JSON.parse(localStorage.getItem("totalTodos"))||0;
-  let completedTodos=JSON.parse(localStorage.getItem("completedTodos"))||0;
+  let totalTodos=JSON.parse(localStorage.getItem("totalTodos"))||[];
+  let completedTodos=JSON.parse(localStorage.getItem("completedTodos"))||[];
   let todos=JSON.parse(localStorage.getItem("todos"))||[];
   let journals=JSON.parse(localStorage.getItem("journals"))||[];
-  let totalHabits=JSON.parse(localStorage.getItem("totalHabits"))||0;
-  let totalGoals=JSON.parse(localStorage.getItem("totalGoals"))||0;
+  let totalHabits=JSON.parse(localStorage.getItem("totalHabits"))||[];
+  let totalGoals=JSON.parse(localStorage.getItem("totalGoals"))||[];
   console.log(totalHabits);
   let cardStyle={
     height:"600px",
