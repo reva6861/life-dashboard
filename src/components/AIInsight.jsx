@@ -16,7 +16,7 @@ export default function AIInsight() {
     console.log("Button clicked");
     setLoading(true);
     try{console.log("About to call backend");
-        const response=await fetch("http://localhost:5000/api/insight",
+        const response=await fetch("https://life-dashboard-api-gopa.onrender.com/api/insight",
         {method:"POST",
         headers:{"Content-Type":"application/JSON"},
         body:JSON.stringify({mood:JSON.stringify(localStorage.getItem("mood")),
