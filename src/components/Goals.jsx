@@ -72,7 +72,7 @@ export default function Goals(props) {
                         paddingLeft: "10px",
                         display: "flex",
                       }}
-                      key={goal.sno}
+                      key={goal?.sno}
                     >
                       <div style={{ width: "700px" }}>
                         <h4>{goal.title}</h4>

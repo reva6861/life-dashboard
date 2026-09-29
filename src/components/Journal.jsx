@@ -75,7 +75,7 @@ const Journal = (props) => {
                   paddingLeft: "10px",
                   display: "flex",
                 }}
-                key={journal.sno}
+                key={journal?.sno}
               >
                 <div style={{ width: "700px" }}>
                   <h3>{journal.title}</h3>
@@ -101,7 +101,7 @@ const Journal = (props) => {
                   <button
                     className="btn btn-sm"
                     style={{ backgroundColor: "purple", color: "white" }}
-                    onClick={() => {setShowEdit(true), setEditTitle(journal.title), setEditDate(journal.date), setEditThoughts(journal.thoughts), setEditSno(journal.sno)}}
+                    onClick={() => {setShowEdit(true), setEditTitle(journal.title), setEditDate(journal.date), setEditThoughts(journal.thoughts), setEditSno(journal?.sno)}}
                   >
                     Edit
                   </button>
@@ -126,7 +126,7 @@ const Journal = (props) => {
                         marginLeft: "400px",
                         padding:"50px"
                       }}
-                      key={journal.sno}
+                      key={journal?.sno}
                     >
                       <div style={{marginLeft:"130px", height:"40px"}}><h4><u>Edit Journal</u></h4></div>
                       <div className="mb-3">
@@ -189,7 +189,7 @@ const Journal = (props) => {
                                       borderRadius: "8px",
                                       paddingLeft: "10px",
                                       paddingRight:"10px",
-                                      marginLeft:"10px"}} type="submit" onClick={()=>{const updatedJournal=props.journals.map((j)=>{if(j.sno===editSno){ return {...j, title:editTitle, date:editDate, thoughts:editThoughts}}else{return j;}});props.onEditJournal(updatedJournal);setShowEdit(false);console.log("BEFORE:", props.journals);console.log("AFTER:", updatedJournal);}}>Save Entry</button></div>
+                                      marginLeft:"10px"}} type="submit" onClick={()=>{const updatedJournal=props.journals.map((j)=>{if(j?.sno===editSno){ return {...j, title:editTitle, date:editDate, thoughts:editThoughts}}else{return j;}});props.onEditJournal(updatedJournal);setShowEdit(false);console.log("BEFORE:", props.journals);console.log("AFTER:", updatedJournal);}}>Save Entry</button></div>
                     </div>
                   </div>
                 ) : null}

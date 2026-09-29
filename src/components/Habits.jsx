@@ -71,7 +71,7 @@ const Habits = (props) => {
                         paddingLeft: "10px",
                         display: "flex",
                       }}
-                      key={habit.sno}
+                      key={habit?.sno}
                     >
                       <div style={{ width: "700px" }}>
                         <h4>{habit.title}</h4>

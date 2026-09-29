@@ -77,7 +77,7 @@ export default function Tasks(props) {
       </ul>
       <br></br>
       
-       {searchedTodos.map((todo)=>(<div key={todo.sno}>
+       {searchedTodos.map((todo)=>(<div key={todo?.sno}>
          <div className="input-group mb-3">
              <div className="input-group-text">
                  <input
@@ -86,7 +86,7 @@ export default function Tasks(props) {
                     value=""
                     aria-label="Checkbox for following text input"
                     checked={todo.ticked}
-                    onChange={()=>{props.toggleTodo(todo.sno)}}
+                    onChange={()=>{props.toggleTodo(todo?.sno)}}
                  />
              </div>
         
